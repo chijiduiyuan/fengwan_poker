@@ -1,0 +1,36 @@
+{
+  "development":{
+     "game_dzPoker": [
+       {"id": 1, "time": "0/10 * * * * *", "action": "dzPokerCron.roomDel"}
+      ],
+     "game_cowWater": [
+       {"id": 2, "time": "0/10 * * * * *", "action": "cowWaterCron.roomDel"}
+      ],
+     "chat": [
+       {"id": 3, "time": "0/1 * * * * *", "action": "chatCron.getPHPMsg"}
+      ],
+     "game_thirducal": [
+       {"id": 4, "time": "0/10 * * * * *", "action": "thirducalCron.roomDel"}
+      ],
+     "game_cowcow": [
+       {"id": 5, "time": "0/10 * * * * *", "action": "cowcowCron.roomDel"}
+      ]
+  },
+  "production":{
+      "game_dzPoker": [
+       {"id": 1, "time": "0/10 * * * * *", "action": "dzPokerCron.roomDel"}
+      ],
+      "game_cowWater": [
+       {"id": 2, "time": "0/10 * * * * *", "action": "cowWaterCron.roomDel"}
+      ],
+     "chat": [
+       {"id": 3, "time": "0/1 * * * * *", "action": "chatCron.getPHPMsg"}
+      ],
+     "game_thirducal": [
+       {"id": 4, "time": "0/10 * * * * *", "action": "thirducalCron.roomDel"}
+      ],
+     "game_cowcow": [
+       {"id": 5, "time": "0/10 * * * * *", "action": "cowcowCron.roomDel"}
+      ]
+  }
+}

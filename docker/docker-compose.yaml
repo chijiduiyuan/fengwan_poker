@@ -1,0 +1,89 @@
+version: '2'
+
+services:
+  poker-pomelo:
+    build: ../poker-node/
+    restart: always
+    container_name: poker-node
+    ports:
+      - "10001:10001"
+    expose:
+      - 3150
+      - 11301
+      - 21001
+    volumes:
+      - ../poker-node:/src/poker-node
+      - ../logs/pomelo:/src/poker-node/logs
+    depends_on:
+      - poker-mysql
+      - poker-redis
+    links:
+      - poker-mysql
+      - poker-redis
+    command: pomelo start -e production -d poker-node
+  poker-nginx:
+    build: ./nginx/
+    restart: always
+    container_name: poker-nginx
+    ports:
+      - "80:80"
+      - "20001:80"
+      - "20004:81"
+      - "20005:82"
+    links:
+      - poker-php-fpm
+    volumes:
+      - ../poker:/var/www/html/poker
+      - ../poker-admin:/var/www/html/admin
+      - ../poker-admin-web/:/var/www/html/admin-web
+      - ../poker-center/:/var/www/html/center
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ../logs/nginx:/var/log/nginx
+    depends_on:
+      - poker-php-fpm
+    command: nginx -g 'daemon off;'
+  poker-mysql:
+    image: mysql:5.7.18
+    restart: always
+    container_name: poker-mysql
+    ports: 
+      - "20002:3306"
+    expose:
+      - 3306
+    volumes:
+      - ../data/mysql:/var/lib/mysql:rw
+      - ../data/poker.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+    environment:
+      MYSQL_ROOT_PASSWORD: mlDZData#@@@
+      MYSQL_DATABASE: poker
+  poker-redis:
+    restart: always
+    build: ./redis/
+    container_name: poker-redis
+    ports:
+      - "20003:6379"
+    expose:
+      - 6379
+    volumes:
+      - ../data/redis/:/data
+  poker-php-fpm:
+    build: ./php/
+    restart: always
+    container_name: poker-php-fpm
+    expose:
+      - 9000
+    volumes:
+      - ../poker:/var/www/html/poker:rw
+      - ../poker-admin:/var/www/html/admin:rw
+      - ../poker-center/:/var/www/html/center
+      - ./php/php.ini:/usr/local/etc/php/php.ini:ro
+      - ./php/php-fpm.conf:/usr/local/etc/php-fpm.conf:ro
+      - ../logs/php-fpm:/var/log/php-fpm:rw
+    depends_on:
+      - poker-mysql
+      - poker-redis
+    links:
+      - poker-mysql
+      - poker-redis
+    command: php-fpm
+

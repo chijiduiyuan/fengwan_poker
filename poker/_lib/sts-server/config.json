@@ -1,0 +1,9 @@
+{
+"AccessKeyID" : "LTAIGkQ8ZeR0FgYV",
+"AccessKeySecret" : "Qh4KsCRHAK3Opv3jDkMtGajFQ9PWuj",
+"RoleArn" : "acs:ram::1228302696249498:role/aliyunosstokengeneratorrole",
+"BucketName" : "texasmalai",
+"Endpoint" : "oss-cn-hangzhou.aliyuncs.com",
+"TokenExpireTime" : "900",
+"PolicyFile": "policy/bucket_read_write_policy.txt"
+}

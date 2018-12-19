@@ -1,0 +1,26 @@
+[
+	{
+	    "type": "connector",
+	    "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rx1"
+	},
+	{
+        "type": "chat",
+        "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rx2"
+    },
+	{
+        "type": "game_dzPoker",
+        "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rx3"
+    },
+    {
+        "type": "game_cowWater",
+        "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rx4"
+    },
+    {
+        "type": "game_thriDucal",
+        "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rx5"
+    },
+    {
+        "type": "game_cowcow",
+        "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rx6"
+    }
+]

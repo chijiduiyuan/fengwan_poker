@@ -1,0 +1,188 @@
+{
+    "development": {
+        "connector": [
+            {
+                "id": "connector-server-1", 
+                "host": "127.0.0.1", 
+                "port": 3150, 
+                "clientHost": "127.0.0.1", 
+                "clientPort": 10001, 
+                "frontend": true
+            }
+        ], 
+        "chat": [
+            {
+                "id": "chat-server-1", 
+                "host": "127.0.0.1", 
+                "port": 11301
+            }
+        ], 
+        "game_dzPoker": [
+            {
+                "id": "game_dzPoker-server-1", 
+                "host": "127.0.0.1", 
+                "port": 21001, 
+                "auto-restart": true
+            }, 
+            {
+                "id": "game_dzPoker-server-2", 
+                "host": "127.0.0.1", 
+                "port": 21002, 
+                "auto-restart": true
+            }
+        ], 
+        "game_cowWater": [
+            {
+                "id": "game_cowWater-server-1", 
+                "host": "127.0.0.1", 
+                "port": 22001, 
+                "auto-restart": true
+            }, 
+            {
+                "id": "game_cowWater-server-2", 
+                "host": "127.0.0.1", 
+                "port": 22002, 
+                "auto-restart": true
+            }
+        ], 
+        "game_thriDucal": [
+            {
+                "id": "game_thriDucal-server-1", 
+                "host": "127.0.0.1", 
+                "port": 23001, 
+                "auto-restart": true
+            }, 
+            {
+                "id": "game_thriDucal-server-2", 
+                "host": "127.0.0.1", 
+                "port": 23002, 
+                "auto-restart": true
+            }
+        ], 
+        "game_cowcow": [
+            {
+                "id": "game_cowcow-server-1", 
+                "host": "127.0.0.1", 
+                "port": 24001, 
+                "auto-restart": true
+            }, 
+            {
+                "id": "game_cowcow-server-2", 
+                "host": "127.0.0.1", 
+                "port": 24002, 
+                "auto-restart": true
+            }
+        ]
+    }, 
+    "production": {
+        "connector": [
+            {
+                "id": "connector-server-1", 
+                "host": "127.0.0.1", 
+                "port": 3150, 
+                "clientHost": "127.0.0.1", 
+                "clientPort": 10001, 
+                "frontend": true
+            }
+        ], 
+        "chat": [
+            {
+                "id": "chat-server-1", 
+                "host": "127.0.0.1", 
+                "port": 11301
+            }
+        ], 
+        "game_dzPoker": [
+            {
+                "id": "game_dzPoker-server-1", 
+                "host": "127.0.0.1", 
+                "port": 21001, 
+                "auto-restart": true
+            }, 
+            {
+                "id": "game_dzPoker-server-2", 
+                "host": "127.0.0.1", 
+                "port": 21002, 
+                "auto-restart": true
+            }, 
+            {
+                "id": "game_dzPoker-server-3", 
+                "host": "127.0.0.1", 
+                "port": 21003, 
+                "auto-restart": true
+            }, 
+            {
+                "id": "game_dzPoker-server-4", 
+                "host": "127.0.0.1", 
+                "port": 21004, 
+                "auto-restart": true
+            }, 
+            {
+                "id": "game_dzPoker-server-5", 
+                "host": "127.0.0.1", 
+                "port": 21005, 
+                "auto-restart": true
+            }
+        ], 
+        "game_cowWater": [
+            {
+                "id": "game_cowWater-server-1", 
+                "host": "127.0.0.1", 
+                "port": 22001, 
+                "auto-restart": true
+            }, 
+            {
+                "id": "game_cowWater-server-2", 
+                "host": "127.0.0.1", 
+                "port": 22002, 
+                "auto-restart": true
+            }, 
+            {
+                "id": "game_cowWater-server-3", 
+                "host": "127.0.0.1", 
+                "port": 22003, 
+                "auto-restart": true
+            }, 
+            {
+                "id": "game_cowWater-server-4", 
+                "host": "127.0.0.1", 
+                "port": 22004, 
+                "auto-restart": true
+            }, 
+            {
+                "id": "game_cowWater-server-5", 
+                "host": "127.0.0.1", 
+                "port": 22005, 
+                "auto-restart": true
+            }
+        ], 
+        "game_thriDucal": [
+            {
+                "id": "game_thriDucal-server-1", 
+                "host": "127.0.0.1", 
+                "port": 23001, 
+                "auto-restart": true
+            }, 
+            {
+                "id": "game_thriDucal-server-2", 
+                "host": "127.0.0.1", 
+                "port": 23002, 
+                "auto-restart": true
+            }
+        ], 
+        "game_cowcow": [
+            {
+                "id": "game_cowcow-server-1", 
+                "host": "127.0.0.1", 
+                "port": 24001, 
+                "auto-restart": true
+            }, 
+            {
+                "id": "game_cowcow-server-2", 
+                "host": "127.0.0.1", 
+                "port": 24002, 
+                "auto-restart": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+# 每小时一次日统计
+00 * * * *  /usr/bin/curl --silent http://127.0.0.1:20004/admin/code.php?route=Pay-countDay &>/dev/null 
+
+# 每6小时一次月统计
+00 */6 * * *  /usr/bin/curl http://127.0.0.1:20004/admin/code.php?route=Pay-countMonth &>/dev/null 
+
+
+
+
+

@@ -1,0 +1,8 @@
+{
+	"development":{
+        	"phpUrl"        : "http://poker-nginx/poker/node.php"
+	},
+	"production":{
+		"phpUrl"        : "http://poker-nginx/poker/node.php"
+	}
+}
